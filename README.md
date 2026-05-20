@@ -1,2 +1,0 @@
-# ideal-invention
-MY  WEBSITE 
