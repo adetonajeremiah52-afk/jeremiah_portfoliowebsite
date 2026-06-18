@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremiah | Software Developer</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Typed JS -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h1 class="logo">Jeremiah</h1>
+
+        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+            <h2>Hello, I'm Jeremiah</h2>
+
+            <h2>
+                I'm a
+                <span id="typing"></span>
+            </h2>
+
+            <p>
+                I build modern and interactive websites using HTML, CSS and JavaScript. 
+                I also develop server-side logic, databases, APIs, and system 
+                functionalities that power application behind the scene.
+            </p>
+            <a href="Jeremiah_CV.pdf" download class="btn">Download CV</a>
+            <a href="#contact" class="btn">Hire Me</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="jeremiah.png" alt="developer">
+        </div>
+
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am a passionate software developer currently learning frontend and backend development.
+            I enjoy building beautiful and responsive websites.
+        </p>
+
+        <div class="stats">
+
+            <div class="box">
+                <h3>5+</h3>
+                <p>Projects</p>
+            </div>
+
+            <div class="box">
+                <h3>1+</h3>
+                <p>Years Learning</p>
+            </div>
+
+            <div class="box">
+                <h3>3+</h3>
+                <p>Skills</p>
+            </div>
+
+        </div>
+
+    </section>
+    
+    <!--Project-->
+    <section id="projects" class="projects">
+        
+        <h2>My Projects</h2>
+        
+        <div class="project-container">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>A Company portfolio website.</p>
+                <a href="./Amba Proj/index.html" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Calculator App</h3>
+                <p>A simple calculator built with HTML, CSS and JavaScript.</p>
+                <a href="./Calculator App/index.html" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>To-Do App</h3>
+                <p>Task management application.</p>
+                <a href="./To-Do App/index.html" target="_blank">View Project</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+
+        <h2>My Services</h2>
+
+        <div class="service-container">
+
+            <div class="card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Frontend Development</h3>
+                <p>Building responsive and interactive websites.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Backend Development</h3>
+                <p>Managing servers, databases, and APIs.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-bug"></i>
+                <h3>Debugging</h3>
+                <p>Fixing website issues and improving performance.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2>Contact Me</h2>
+
+        <form id="form">
+        <div class="field">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" required>
+        </div>
+        <div class="field">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div class="field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div class="field">
+            <label for="message">Message</label>
+            <input type="text" name="message" id="message" required>
+        </div>
+        <input type="submit" id="button" class="field" value="Send Email" >
+        </form>
+
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+        <script type="text/javascript">
+            emailjs.init('oXsvSga2Hr1Snue42')
+        </script>
+        
+        <!-- Social Icons -->
+        <div class="socials">
+
+            <a href="https://github.com/adetonajeremiah52-afk"><i class="fab fa-github"></i></a>
+
+            <a href="https://www.linkedin.com/in/jeremiah-adetona-a099b83b3"><i class="fab fa-linkedin"></i></a>
+
+            <a href="https://wa.me/2348082627385"><i class="fab fa-whatsapp"></i></a>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Jeremiah | Software Developer</p>
+    </footer>
+
+    <button id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>

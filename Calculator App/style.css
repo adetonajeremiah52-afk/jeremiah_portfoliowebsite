@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1e2f, #252542);
+}
+
+.calculator {
+    width: 100%;
+    max-width: 440px;
+    background: #0f0f1a;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.screen {
+    background-color: #161626;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    text-align: right;
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-break: break-all;
+}
+
+#history {
+    font-size: 0.95rem;
+    color: #707093;
+    min-height: 24px;
+}
+
+#display {
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 16px 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #23233b;
+    color: #e2e2e9;
+    transition: all 0.15s ease;
+}
+
+.btn:hover {
+    background-color: #2d2d4a;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Color Coding for Calculator Types */
+.btn.sci {
+    background-color: #1a1a2e;
+    color: #4da6ff;
+}
+.btn.sci:hover { background-color: #22223f; }
+
+.btn.action {
+    background-color: #3b2323;
+    color: #ff6b6b;
+}
+.btn.action:hover { background-color: #4a2d2d; }
+
+.btn.op {
+    background-color: #2d233b;
+    color: #b366ff;
+}
+.btn.op:hover { background-color: #392d4a; }
+
+.btn.equal {
+    background-color: #0080ff;
+    color: white;
+    grid-column: span 1;
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn.equal:hover { background-color: #3399ff; }
+
+.btn.zero {
+    grid-column: span 2;
+}
+
+/* Append or blend these into your existing style.css file */
+
+.calculator {
+    position: relative; /* Needed to anchor the sliding log panel */
+    overflow: hidden;   /* Keeps the history panel tucked inside safely */
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+#memory-indicator {
+    font-size: 0.8rem;
+    color: #4da6ff;
+    font-weight: bold;
+}
+
+.history-toggle-btn {
+    background: transparent;
+    border: none;
+    color: #707093;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+.history-toggle-btn:hover { color: #ffffff; }
+
+/* Memory Keys Design Style */
+.btn.mem {
+    background-color: #1a2332;
+    color: #a3c2ec;
+    font-size: 0.95rem;
+    padding: 12px 0;
+}
+.btn.mem:hover { background-color: #243248; }
+
+/* History Log Sliding Panel Panel styling */
+.history-log {
+    position: absolute;
+    top: 0;
+    right: -100%; /* Hidden off-screen right by default */
+    width: 100%;
+    height: 100%;
+    background: #0b0b13;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.history-log.open {
+    right: 0; /* Slides into framework view */
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #23233b;
+    padding-bottom: 10px;
+}
+
+.close-btn {
+    background: transparent;
+    border: none;
+    color: #ff6b6b;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.history-list {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.history-item {
+    text-align: right;
+    padding: 10px 0;
+    border-bottom: 1px solid #161626;
+    cursor: pointer;
+}
+.history-item:hover { background: #161626; border-radius: 8px;}
+
+.history-item-exp {
+    font-size: 0.85rem;
+    color: #707093;
+}
+
+.history-item-res {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.empty-msg {
+    color: #707093;
+    text-align: center;
+    margin-top: 40px;
+    font-style: italic;
+}
+
+.clear-history-btn {
+    background: #3b2323;
+    color: #ff6b6b;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 12px;
+}
+.clear-history-btn:hover { background: #4a2d2d; }
